@@ -12,7 +12,7 @@ This gem contains the Ruby, Rails, HAML and SCSS style guides, as well as Ruboco
 
 - add the following lines to `development` and `test` groups of your project's Gemfile:
   ```
-  gem 'mfv_style_guide', git: 'git@github.com/mfv_style_guide.git', branch: 'master'
+  gem 'mfv_style_guide', git: 'git@github.com:moneyforwardvietnam/ruby-coding-guidelines.git', branch: 'master'
   ```
 - create a file named `.rubocop.yml` in your project's root with the following contents:
   ```
