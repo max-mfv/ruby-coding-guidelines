@@ -2,9 +2,9 @@
 
 This gem contains the Ruby, Rails, HAML and SCSS style guides, as well as Rubocop configs that enforce the rules in the Ruby and Rails Style guides.
 
-* [Ruby Style Guide](mf_ruby_style_guide.md)
-* [Rails Style Guide](mf_rails_style_guide.md)
-* [SCSS Style Guide](mf_scss_style_guide.md)
+* [Ruby Style Guide](mfv_ruby_style_guide.md)
+* [Rails Style Guide](mfv_rails_style_guide.md)
+* [SCSS Style Guide](mfv_scss_style_guide.md)
 
 ## Installation
 
