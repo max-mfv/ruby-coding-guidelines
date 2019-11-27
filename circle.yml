@@ -1,0 +1,4 @@
+test:
+  pre:
+    # We're always running rubocop, but currently don't want it to fail.
+    - bundle exec rake 'mfv_style_guide:dirtycop[--branch]' || true
