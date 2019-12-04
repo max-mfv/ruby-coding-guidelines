@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'mfv_style_guide'
-  spec.version       = '0.0.1'
+  spec.version       = '0.0.2'
   spec.authors       = ['max-mfv']
   spec.email         = ['nguyen.ba.manh@moneyforward.vn']
 
