@@ -1,2 +1,5 @@
 inherit_from:
   - config/default.yml
+require:
+  - rubocop-performance
+  - rubocop-rails
