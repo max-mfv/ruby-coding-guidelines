@@ -127,7 +127,7 @@ Layout/AccessModifierIndentation:
   IndentationWidth: ~
 
 # Align the elements of a hash literal if they span more than one line.
-Layout/AlignHash:
+Layout/HashAlignment:
   # Alignment of entries using hash rocket as separator. Valid values are:
   #
   # key - left alignment of keys
@@ -198,7 +198,7 @@ Layout/AlignHash:
     - ignore_implicit
     - ignore_explicit
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   # Alignment of parameters in multi-line method calls.
   #
   # The `with_first_parameter` style aligns the following lines along the same
@@ -323,7 +323,7 @@ Layout/IndentationWidth:
   IgnoredPatterns: []
 
 # Checks the indentation of the first element in an array literal.
-Layout/IndentArray:
+Layout/FirstArrayElementIndentation:
   # The value `special_inside_parentheses` means that array literals with
   # brackets that have their opening bracket on the same line as a surrounding
   # opening round parenthesis, shall have their first element indented relative
@@ -345,13 +345,13 @@ Layout/IndentArray:
   IndentationWidth: ~
 
 # Checks the indentation of assignment RHS, when on a different line from LHS
-Layout/IndentAssignment:
+Layout/AssignmentIndentation:
   # By default, the indentation width from `Layout/IndentationWidth` is used
   # But it can be overridden by setting this parameter
   IndentationWidth: ~
 
 # Checks the indentation of the first key in a hash literal.
-Layout/IndentHash:
+Layout/FirstHashElementIndentation:
   # The value `special_inside_parentheses` means that hash literals with braces
   # that have their opening brace on the same line as a surrounding opening
   # round parenthesis, shall have their first key indented relative to the
@@ -372,7 +372,7 @@ Layout/IndentHash:
   # But it can be overridden by setting this parameter
   IndentationWidth: ~
 
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   EnforcedStyle: auto_detection
   SupportedStyles:
     - auto_detection
@@ -526,7 +526,7 @@ Layout/SpaceInsideStringInterpolation:
     - space
     - no_space
 
-Layout/TrailingBlankLines:
+Layout/TrailingEmptyLines:
   EnforcedStyle: final_newline
   SupportedStyles:
     - final_newline
@@ -1055,7 +1055,7 @@ Style/PercentLiteralDelimiters:
     '%w': '[]'
     '%W': '[]'
 
-# Old Alex R's settings:    
+# Old Alex R's settings:
 #     '%': ()
 #     '%i': ()
 #     '%q': ()
@@ -1220,7 +1220,7 @@ Style/TrailingCommaInArguments:
     - consistent_comma
     - no_comma
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
   # If `comma`, the cop requires a comma after the last item in an array or
   # hash, but only when each item is on its own line.
   # If `consistent_comma`, the cop requires a comma after the last item of all
@@ -1452,10 +1452,10 @@ Performance/RedundantMerge:
   # Max number of key-value pairs to consider an offense
   MaxKeyValuePairs: 2
 
-# Checks for usages of count on an Enumerable that follow calls to select or reject. 
-# Querying logic can instead be passed to the count call.  
+# Checks for usages of count on an Enumerable that follow calls to select or reject.
+# Querying logic can instead be passed to the count call.
 Performance/Count:
-  SafeMode: true
+  SafeAutoCorrect: true
 
 
 #################### Rails #################################

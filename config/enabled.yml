@@ -10,20 +10,20 @@ Layout/AccessModifierIndentation:
   StyleGuide: '#indent-public-private-protected'
   Enabled: true
 
-Layout/AlignArray:
+Layout/ArrayAlignment:
   Description: >-
                  Align the elements of an array literal if they span more than
                  one line.
   StyleGuide: '#align-multiline-arrays'
   Enabled: true
 
-Layout/AlignHash:
+Layout/HashAlignment:
   Description: >-
                  Align the elements of a hash literal if they span more than
                  one line.
   Enabled: true
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Description: >-
                  Align the parameters of a method call if they span more
                  than one line.
@@ -129,23 +129,23 @@ Layout/IndentationWidth:
   StyleGuide: '#spaces-indentation'
   Enabled: true
 
-Layout/IndentArray:
+Layout/FirstArrayElementIndentation:
   Description: >-
                  Checks the indentation of the first element in an array
                  literal.
   Enabled: true
 
-Layout/IndentAssignment:
+Layout/AssignmentIndentation:
   Description: >-
                  Checks the indentation of the first line of the
                  right-hand-side of a multi-line assignment.
   Enabled: true
 
-Layout/IndentHash:
+Layout/FirstHashElementIndentation:
   Description: 'Checks the indentation of the first key in a hash literal.'
   Enabled: true
 
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Description: 'This cops checks the indentation of the here document bodies.'
   StyleGuide: '#squiggly-heredocs'
   Enabled: true
@@ -331,7 +331,7 @@ Layout/Tab:
   StyleGuide: '#spaces-indentation'
   Enabled: true
 
-Layout/TrailingBlankLines:
+Layout/TrailingEmptyLines:
   Description: 'Checks trailing blank lines and final newline.'
   StyleGuide: '#newline-eof'
   Enabled: true
@@ -653,7 +653,12 @@ Style/MethodName:
   StyleGuide: '#snake-case-symbols-methods-vars'
   Enabled: true
 
-Style/MethodMissing:
+Style/MethodMissingSuper:
+  Description: 'Avoid using `method_missing`.'
+  StyleGuide: '#no-method-missing'
+  Enabled: true
+
+Style/MissingRespondToMissing
   Description: 'Avoid using `method_missing`.'
   StyleGuide: '#no-method-missing'
   Enabled: true
@@ -782,7 +787,7 @@ Style/OneLineConditional:
   StyleGuide: '#ternary-operator'
   Enabled: true
 
-Style/OpMethod:
+Naming/BinaryOperatorParameterName:
   Description: 'When defining binary operators, name the argument other.'
   StyleGuide: '#other-arg'
   Enabled: true
@@ -958,7 +963,7 @@ Style/TrailingCommaInArguments:
   StyleGuide: '#no-trailing-params-comma'
   Enabled: true
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
   Description: 'Checks for trailing comma in array and hash literals.'
   StyleGuide: '#no-trailing-array-commas'
   Enabled: true
@@ -975,15 +980,15 @@ Style/UnlessElse:
   StyleGuide: '#no-else-with-unless'
   Enabled: true
 
-Style/UnneededCapitalW:
+Style/RedundantCapitalW:
   Description: 'Checks for %W when interpolation is not needed.'
   Enabled: true
 
-Style/UnneededInterpolation:
+Style/RedundantInterpolation:
   Description: 'Checks for strings that are just an interpolated expression.'
   Enabled: true
 
-Style/UnneededPercentQ:
+Style/RedundantPercentQ:
   Description: 'Checks for %q/%Q when single quotes or double quotes would do.'
   StyleGuide: '#percent-q'
   Enabled: true
@@ -1162,7 +1167,7 @@ Lint/DuplicateMethods:
   Description: 'Check for duplicate method definitions.'
   Enabled: true
 
-Lint/DuplicatedKey:
+Lint/DuplicateHashKey:
   Description: 'Check for duplicate keys in hash literals.'
   Enabled: true
 
@@ -1214,7 +1219,7 @@ Lint/FormatParameterMismatch:
   Description: 'The number of parameters to format/sprint must match the fields.'
   Enabled: true
 
-Lint/HandleExceptions:
+Lint/SuppressedException:
   Description: "Don't suppress exception."
   StyleGuide: '#dont-hide-exceptions'
   Enabled: true
@@ -1235,12 +1240,6 @@ Lint/InheritException:
   Description: 'Avoid inheriting from the `Exception` class.'
   Enabled: true
 
-Lint/InvalidCharacterLiteral:
-  Description: >-
-                 Checks for invalid character literals with a non-escaped
-                 whitespace character.
-  Enabled: true
-
 Lint/LiteralInCondition:
   Description: 'Checks of literals used in conditions.'
   Enabled: true
@@ -1256,7 +1255,7 @@ Lint/Loop:
   StyleGuide: '#loop-with-break'
   Enabled: true
 
-Lint/MultipleCompare:
+Lint/MultipleComparison:
   Description: "Use `&&` operator to compare multiple value."
   Enabled: true
 
@@ -1333,7 +1332,7 @@ Lint/ShadowingOuterLocalVariable:
                  for block arguments or block local variables.
   Enabled: true
 
-Lint/StringConversionInInterpolation:
+Lint/RedundantStringCoercion:
   Description: 'Checks for Object#to_s usage in string interpolation.'
   StyleGuide: '#no-to-s'
   Enabled: true
@@ -1357,7 +1356,7 @@ Lint/UnneededDisable:
                  It must be explicitly disabled.
   Enabled: true
 
-Lint/UnneededSplatExpansion:
+Lint/RedundantSplatExpansion:
   Description: 'Checks for splat unnecessarily being called on literals'
   Enabled: true
 
@@ -1434,7 +1433,7 @@ Performance/Count:
   # frameworks. ActiveRecord's `count` ignores the block that is passed to it.
   # For more information, see the documentation in the cop itself.
   # If you understand the known risk, you can disable `SafeMode`.
-  SafeMode: true
+  SafeAutoCorrect: true
   Enabled: true
 
 Performance/Detect:
@@ -1446,7 +1445,7 @@ Performance/Detect:
   # frameworks. `ActiveRecord` does not implement a `detect` method and `find`
   # has its own meaning. Correcting `ActiveRecord` methods with this cop
   # should be considered unsafe.
-  SafeMode: true
+  SafeAutoCorrect: true
   Enabled: true
 
 Performance/DoubleStartEndWith:
