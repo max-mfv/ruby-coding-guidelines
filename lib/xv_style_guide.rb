@@ -1,4 +1,3 @@
-require 'mfv_style_guide/version'
 require 'mfv_style_guide/railtie' if defined?(Rails)
 
 module MfvStyleGuide
