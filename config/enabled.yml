@@ -658,7 +658,7 @@ Style/MethodMissingSuper:
   StyleGuide: '#no-method-missing'
   Enabled: true
 
-Style/MissingRespondToMissing
+Style/MissingRespondToMissing:
   Description: 'Avoid using `method_missing`.'
   StyleGuide: '#no-method-missing'
   Enabled: true
